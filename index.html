@@ -314,10 +314,42 @@
       color: #81C784;
       font-weight: 500;
       transition: all 0.2s;
+      text-decoration: none;
+    }
+
+    .store-badge:hover {
+      background: linear-gradient(135deg, rgba(76,175,80,0.3), rgba(76,175,80,0.15));
+      color: #A5D6A7;
     }
 
     .app-card:hover .store-badge {
       background: linear-gradient(135deg, rgba(76,175,80,0.25), rgba(76,175,80,0.1));
+    }
+
+    .legal-links {
+      display: flex;
+      gap: 16px;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+
+    .legal-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .legal-link:hover {
+      color: var(--accent-light);
+    }
+
+    .legal-link svg {
+      flex-shrink: 0;
     }
 
     /* Technologies section */
@@ -496,8 +528,7 @@
     <div class="apps-grid">
 
       <!-- АгроСкан -->
-      <a class="app-card" href="https://apps.rustore.ru/app/com.zubcoder.agroscan" target="_blank" rel="noopener"
-         style="--card-accent: linear-gradient(135deg, #4CAF50, #81C784); --card-glow: rgba(76,175,80,0.15);">
+      <div class="app-card" style="--card-accent: linear-gradient(135deg, #4CAF50, #81C784); --card-glow: rgba(76,175,80,0.15);">
         <div class="app-card-header">
           <img class="app-icon" src="icons/agroscan.png" alt="АгроСкан">
           <div class="app-title-block">
@@ -513,15 +544,18 @@
           <span class="app-tag">Растения</span>
           <span class="app-tag">Диагностика</span>
         </div>
-        <div class="store-badge">
+        <a href="https://apps.rustore.ru/app/com.zubcoder.agroscan" target="_blank" rel="noopener" class="store-badge">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Скачать в RuStore
+        </a>
+        <div class="legal-links">
+          <a class="legal-link" href="agroscan/privacy.html"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Политика конфиденциальности</a>
+          <a class="legal-link" href="agroscan/terms.html"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> Пользовательское соглашение</a>
         </div>
-      </a>
+      </div>
 
       <!-- Умный МеханикAI -->
-      <a class="app-card" href="https://apps.rustore.ru/app/com.smartmechanic.smart_mechanic" target="_blank" rel="noopener"
-         style="--card-accent: linear-gradient(135deg, #FF5722, #FF8A65); --card-glow: rgba(255,87,34,0.15);">
+      <div class="app-card" style="--card-accent: linear-gradient(135deg, #FF5722, #FF8A65); --card-glow: rgba(255,87,34,0.15);">
         <div class="app-card-header">
           <img class="app-icon" src="icons/mechanic.png" alt="Умный МеханикAI">
           <div class="app-title-block">
@@ -537,15 +571,18 @@
           <span class="app-tag">Авто/Мото</span>
           <span class="app-tag">Ремонт</span>
         </div>
-        <div class="store-badge">
+        <a href="https://apps.rustore.ru/app/com.smartmechanic.smart_mechanic" target="_blank" rel="noopener" class="store-badge">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Скачать в RuStore
+        </a>
+        <div class="legal-links">
+          <a class="legal-link" href="smart-mechanic/privacy.html"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Политика конфиденциальности</a>
+          <a class="legal-link" href="smart-mechanic/terms.html"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> Пользовательское соглашение</a>
         </div>
-      </a>
+      </div>
 
       <!-- Stain Fix -->
-      <a class="app-card" href="https://apps.rustore.ru/app/com.zubcoder.ai_stain_fix" target="_blank" rel="noopener"
-         style="--card-accent: linear-gradient(135deg, #9C27B0, #CE93D8); --card-glow: rgba(156,39,176,0.15);">
+      <div class="app-card" style="--card-accent: linear-gradient(135deg, #9C27B0, #CE93D8); --card-glow: rgba(156,39,176,0.15);">
         <div class="app-card-header">
           <img class="app-icon" src="icons/stain_fix.png" alt="Stain Fix">
           <div class="app-title-block">
@@ -561,15 +598,18 @@
           <span class="app-tag">Быт</span>
           <span class="app-tag">Чистка</span>
         </div>
-        <div class="store-badge">
+        <a href="https://apps.rustore.ru/app/com.zubcoder.ai_stain_fix" target="_blank" rel="noopener" class="store-badge">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Скачать в RuStore
+        </a>
+        <div class="legal-links">
+          <a class="legal-link" href="stain-fix/privacy.html"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Политика конфиденциальности</a>
+          <a class="legal-link" href="stain-fix/terms.html"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> Пользовательское соглашение</a>
         </div>
-      </a>
+      </div>
 
       <!-- ЕдаСкан -->
-      <a class="app-card" href="https://apps.rustore.ru/app/com.zubcoder.foodscan" target="_blank" rel="noopener"
-         style="--card-accent: linear-gradient(135deg, #FF9800, #FFB74D); --card-glow: rgba(255,152,0,0.15);">
+      <div class="app-card" style="--card-accent: linear-gradient(135deg, #FF9800, #FFB74D); --card-glow: rgba(255,152,0,0.15);">
         <div class="app-card-header">
           <img class="app-icon" src="icons/foodscan.png" alt="ЕдаСкан">
           <div class="app-title-block">
@@ -585,15 +625,18 @@
           <span class="app-tag">Еда</span>
           <span class="app-tag">Здоровье</span>
         </div>
-        <div class="store-badge">
+        <a href="https://apps.rustore.ru/app/com.zubcoder.foodscan" target="_blank" rel="noopener" class="store-badge">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Скачать в RuStore
+        </a>
+        <div class="legal-links">
+          <a class="legal-link" href="foodscan/privacy.html"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Политика конфиденциальности</a>
+          <a class="legal-link" href="foodscan/terms.html"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> Пользовательское соглашение</a>
         </div>
-      </a>
+      </div>
 
       <!-- AI Фармацевт -->
-      <a class="app-card" href="https://apps.rustore.ru/app/com.zubcoder.aipharmacist" target="_blank" rel="noopener"
-         style="--card-accent: linear-gradient(135deg, #00BCD4, #80DEEA); --card-glow: rgba(0,188,212,0.15);">
+      <div class="app-card" style="--card-accent: linear-gradient(135deg, #00BCD4, #80DEEA); --card-glow: rgba(0,188,212,0.15);">
         <div class="app-card-header">
           <img class="app-icon" src="icons/pharmacist.png" alt="AI Фармацевт">
           <div class="app-title-block">
@@ -609,15 +652,18 @@
           <span class="app-tag">Медицина</span>
           <span class="app-tag">Лекарства</span>
         </div>
-        <div class="store-badge">
+        <a href="https://apps.rustore.ru/app/com.zubcoder.aipharmacist" target="_blank" rel="noopener" class="store-badge">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Скачать в RuStore
+        </a>
+        <div class="legal-links">
+          <a class="legal-link" href="pharmacist/privacy.html"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Политика конфиденциальности</a>
+          <a class="legal-link" href="pharmacist/terms.html"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> Пользовательское соглашение</a>
         </div>
-      </a>
+      </div>
 
       <!-- AI Ландшафт -->
-      <a class="app-card" href="https://apps.rustore.ru/app/com.zubcoder.ai_landscape" target="_blank" rel="noopener"
-         style="--card-accent: linear-gradient(135deg, #8BC34A, #AED581); --card-glow: rgba(139,195,74,0.15);">
+      <div class="app-card" style="--card-accent: linear-gradient(135deg, #8BC34A, #AED581); --card-glow: rgba(139,195,74,0.15);">
         <div class="app-card-header">
           <img class="app-icon" src="icons/landscape.png" alt="AI Ландшафт">
           <div class="app-title-block">
@@ -633,15 +679,18 @@
           <span class="app-tag">Дизайн</span>
           <span class="app-tag">Ландшафт</span>
         </div>
-        <div class="store-badge">
+        <a href="https://apps.rustore.ru/app/com.zubcoder.ai_landscape" target="_blank" rel="noopener" class="store-badge">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Скачать в RuStore
+        </a>
+        <div class="legal-links">
+          <a class="legal-link" href="landscape/privacy.html"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Политика конфиденциальности</a>
+          <a class="legal-link" href="landscape/terms.html"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> Пользовательское соглашение</a>
         </div>
-      </a>
+      </div>
 
       <!-- Город во Времени -->
-      <a class="app-card" href="https://apps.rustore.ru/app/com.zubkov.city_in_time" target="_blank" rel="noopener"
-         style="--card-accent: linear-gradient(135deg, #795548, #A1887F); --card-glow: rgba(121,85,72,0.15);">
+      <div class="app-card" style="--card-accent: linear-gradient(135deg, #795548, #A1887F); --card-glow: rgba(121,85,72,0.15);">
         <div class="app-card-header">
           <img class="app-icon" src="icons/cityintime.png" alt="Город во Времени">
           <div class="app-title-block">
@@ -657,15 +706,18 @@
           <span class="app-tag">История</span>
           <span class="app-tag">AR-камера</span>
         </div>
-        <div class="store-badge">
+        <a href="https://apps.rustore.ru/app/com.zubkov.city_in_time" target="_blank" rel="noopener" class="store-badge">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Скачать в RuStore
+        </a>
+        <div class="legal-links">
+          <a class="legal-link" href="cityintime/privacy.html"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Политика конфиденциальности</a>
+          <a class="legal-link" href="cityintime/terms.html"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> Пользовательское соглашение</a>
         </div>
-      </a>
+      </div>
 
       <!-- AI Кулинар -->
-      <a class="app-card" href="https://apps.rustore.ru/app/com.zubcoder.ai_kulinar" target="_blank" rel="noopener"
-         style="--card-accent: linear-gradient(135deg, #E91E63, #F48FB1); --card-glow: rgba(233,30,99,0.15);">
+      <div class="app-card" style="--card-accent: linear-gradient(135deg, #E91E63, #F48FB1); --card-glow: rgba(233,30,99,0.15);">
         <div class="app-card-header">
           <img class="app-icon" src="icons/kulinar.png" alt="AI Кулинар">
           <div class="app-title-block">
@@ -681,15 +733,18 @@
           <span class="app-tag">Кулинария</span>
           <span class="app-tag">Рецепты</span>
         </div>
-        <div class="store-badge">
+        <a href="https://apps.rustore.ru/app/com.zubcoder.ai_kulinar" target="_blank" rel="noopener" class="store-badge">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Скачать в RuStore
+        </a>
+        <div class="legal-links">
+          <a class="legal-link" href="kulinar/privacy.html"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Политика конфиденциальности</a>
+          <a class="legal-link" href="kulinar/terms.html"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> Пользовательское соглашение</a>
         </div>
-      </a>
+      </div>
 
       <!-- AI Ремонт -->
-      <a class="app-card" href="https://apps.rustore.ru/app/com.zubcoder.ai_remont" target="_blank" rel="noopener"
-         style="--card-accent: linear-gradient(135deg, #FF6D00, #FFA726); --card-glow: rgba(255,109,0,0.15);">
+      <div class="app-card" style="--card-accent: linear-gradient(135deg, #FF6D00, #FFA726); --card-glow: rgba(255,109,0,0.15);">
         <div class="app-card-header">
           <img class="app-icon" src="icons/remont.png" alt="AI Ремонт">
           <div class="app-title-block">
@@ -705,15 +760,18 @@
           <span class="app-tag">Ремонт</span>
           <span class="app-tag">Интерьер</span>
         </div>
-        <div class="store-badge">
+        <a href="https://apps.rustore.ru/app/com.zubcoder.ai_remont" target="_blank" rel="noopener" class="store-badge">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Скачать в RuStore
+        </a>
+        <div class="legal-links">
+          <a class="legal-link" href="remont/privacy.html"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Политика конфиденциальности</a>
+          <a class="legal-link" href="remont/terms.html"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> Пользовательское соглашение</a>
         </div>
-      </a>
+      </div>
 
       <!-- AI Нумизмат -->
-      <a class="app-card" href="https://apps.rustore.ru/app/com.zubcoder.ai_numizmat" target="_blank" rel="noopener"
-         style="--card-accent: linear-gradient(135deg, #FFD700, #FFE082); --card-glow: rgba(255,215,0,0.15);">
+      <div class="app-card" style="--card-accent: linear-gradient(135deg, #FFD700, #FFE082); --card-glow: rgba(255,215,0,0.15);">
         <div class="app-card-header">
           <img class="app-icon" src="icons/numizmat.png" alt="AI Нумизмат">
           <div class="app-title-block">
@@ -729,15 +787,18 @@
           <span class="app-tag">Монеты</span>
           <span class="app-tag">Коллекции</span>
         </div>
-        <div class="store-badge">
+        <a href="https://apps.rustore.ru/app/com.zubcoder.ai_numizmat" target="_blank" rel="noopener" class="store-badge">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Скачать в RuStore
+        </a>
+        <div class="legal-links">
+          <a class="legal-link" href="numizmat/privacy.html"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Политика конфиденциальности</a>
+          <a class="legal-link" href="numizmat/terms.html"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> Пользовательское соглашение</a>
         </div>
-      </a>
+      </div>
 
       <!-- AI Юрист -->
-      <a class="app-card" href="https://apps.rustore.ru/app/com.zubcoder.ai_yurist" target="_blank" rel="noopener"
-         style="--card-accent: linear-gradient(135deg, #1A237E, #5C6BC0); --card-glow: rgba(26,35,126,0.15);">
+      <div class="app-card" style="--card-accent: linear-gradient(135deg, #1A237E, #5C6BC0); --card-glow: rgba(26,35,126,0.15);">
         <div class="app-card-header">
           <img class="app-icon" src="icons/yurist.png" alt="AI Юрист">
           <div class="app-title-block">
@@ -753,15 +814,18 @@
           <span class="app-tag">Право</span>
           <span class="app-tag">Документы</span>
         </div>
-        <div class="store-badge">
+        <a href="https://apps.rustore.ru/app/com.zubcoder.ai_yurist" target="_blank" rel="noopener" class="store-badge">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Скачать в RuStore
+        </a>
+        <div class="legal-links">
+          <a class="legal-link" href="yurist/privacy.html"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Политика конфиденциальности</a>
+          <a class="legal-link" href="yurist/terms.html"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> Пользовательское соглашение</a>
         </div>
-      </a>
+      </div>
 
       <!-- AI Лингвист -->
-      <a class="app-card" href="https://apps.rustore.ru/app/com.zubcoder.ai_lingvist" target="_blank" rel="noopener"
-         style="--card-accent: linear-gradient(135deg, #3F51B5, #7986CB); --card-glow: rgba(63,81,181,0.15);">
+      <div class="app-card" style="--card-accent: linear-gradient(135deg, #3F51B5, #7986CB); --card-glow: rgba(63,81,181,0.15);">
         <div class="app-card-header">
           <img class="app-icon" src="icons/lingvist.png" alt="AI Лингвист">
           <div class="app-title-block">
@@ -777,11 +841,15 @@
           <span class="app-tag">Языки</span>
           <span class="app-tag">Перевод</span>
         </div>
-        <div class="store-badge">
+        <a href="https://apps.rustore.ru/app/com.zubcoder.ai_lingvist" target="_blank" rel="noopener" class="store-badge">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Скачать в RuStore
+        </a>
+        <div class="legal-links">
+          <a class="legal-link" href="lingvist/privacy.html"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Политика конфиденциальности</a>
+          <a class="legal-link" href="lingvist/terms.html"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> Пользовательское соглашение</a>
         </div>
-      </a>
+      </div>
 
     </div>
 
