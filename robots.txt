@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zubcoder-apps.ru/yurist/sitemap.xml

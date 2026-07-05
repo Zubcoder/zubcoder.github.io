@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Калькулятор неустойки по закону о защите прав потребителей 2026</title>
+<meta name="description" content="Онлайн-калькулятор неустойки (пени) по закону о защите прав потребителей: 1% или 3% в день. Рассчитайте сумму неустойки за просрочку бесплатно.">
+<meta name="keywords" content="калькулятор неустойки, расчёт неустойки, пеня, неустойка 1 процент, неустойка 3 процента, защита прав потребителей">
+<link rel="canonical" href="https://zubcoder-apps.ru/yurist/kalkulyatory/neustojka.html">
+<meta property="og:title" content="Калькулятор неустойки онлайн">
+<meta property="og:description" content="Рассчитайте неустойку по закону о защите прав потребителей.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://zubcoder-apps.ru/yurist/kalkulyatory/neustojka.html">
+<link rel="icon" type="image/png" href="../../logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  .calc { background:#fff; border:1px solid var(--border); border-radius:var(--radius); padding:26px; box-shadow:var(--shadow); max-width:560px; }
+  .calc label { display:block; font-weight:600; margin:14px 0 6px; font-size:15px; }
+  .calc input, .calc select { width:100%; padding:12px 14px; border:1px solid var(--border); border-radius:10px; font-size:16px; font-family:inherit; }
+  .calc .row { display:flex; gap:14px; }
+  .calc .row > div { flex:1; }
+  .calc-result { margin-top:22px; background:#eef1fb; border-radius:12px; padding:20px; display:none; }
+  .calc-result.show { display:block; }
+  .calc-result .big { font-size:32px; font-weight:800; color:var(--navy); }
+  .calc-result .sub { color:var(--text-soft); font-size:14px; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a href="../" class="nav-brand"><span class="logo-badge">⚖️</span> AI Юрист</a>
+    <button class="nav-burger" aria-label="Меню">☰</button>
+    <nav class="nav-links">
+      <a href="../#articles">Статьи</a>
+      <a href="../shablony/">Образцы документов</a>
+      <a href="neustojka.html">Калькуляторы</a>
+      <a class="nav-cta" data-app-link href="#">Скачать приложение</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container breadcrumbs">
+  <a href="../">Главная</a> → Калькулятор неустойки
+</div>
+
+<div class="container article-wrap">
+  <article class="post">
+    <h1>Калькулятор неустойки</h1>
+    <div class="meta">По Закону РФ «О защите прав потребителей»</div>
+    <p>Рассчитайте неустойку (пеню) за нарушение сроков. Для просрочки возврата денег за товар и требований потребителя обычно применяется <strong>1% в день</strong>, для нарушения сроков выполнения работ/услуг — <strong>3% в день</strong>.</p>
+
+    <div class="calc">
+      <label for="sum">Сумма (стоимость товара / услуги), ₽</label>
+      <input type="number" id="sum" placeholder="Например, 25000" min="0">
+
+      <div class="row">
+        <div>
+          <label for="days">Дней просрочки</label>
+          <input type="number" id="days" placeholder="Например, 30" min="0">
+        </div>
+        <div>
+          <label for="rate">Ставка</label>
+          <select id="rate">
+            <option value="1">1% в день (товары, возврат денег)</option>
+            <option value="3">3% в день (работы и услуги)</option>
+            <option value="0.5">0,5% в день</option>
+          </select>
+        </div>
+      </div>
+
+      <div style="margin-top:18px;">
+        <button class="copy-btn" id="calcBtn" type="button">Рассчитать</button>
+      </div>
+
+      <div class="calc-result" id="res">
+        <div class="big" id="resSum">0 ₽</div>
+        <div class="sub" id="resDetail"></div>
+      </div>
+    </div>
+
+    <div class="callout warn" style="margin-top:24px;">Важно: по закону о защите прав потребителей неустойка за нарушение сроков выполнения работ (услуг) не может превышать общую цену заказа. Итоговый размер может быть уменьшен судом по ст. 333 ГК РФ.</div>
+
+    <div class="ad-slot">Рекламный блок РСЯ</div>
+
+    <div class="app-cta">
+      <h3>Как взыскать неустойку?</h3>
+      <p>Приложение AI Юрист подскажет, как включить неустойку в претензию и иск, и что ещё можно потребовать (штраф 50%, моральный вред).</p>
+      <a class="btn btn-primary" data-app-link href="#">Скачать в RuStore</a>
+    </div>
+
+    <p>См. также: <a href="../shablony/pretenziya-vozvrat.html">образец претензии</a>, статья <a href="../articles/vozvrat-tovara.html">«Возврат товара»</a>.</p>
+  </article>
+
+  <aside class="article-aside">
+    <div class="sticky">
+      <div class="ad-slot tall">Рекламный блок РСЯ</div>
+      <div class="partner-box" data-partners>
+        <span class="tag">Партнёрские предложения</span>
+        <h4>Может пригодиться</h4>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© 2025–2026 Zubcoder Apps · <a href="../">AI Юрист</a></span>
+      <span>zubcoder.app@yandex.ru</span>
+    </div>
+    <p class="disclaimer">Материалы носят справочный характер и не являются юридической консультацией.</p>
+  </div>
+</footer>
+
+<script src="../assets/main.js"></script>
+<script>
+(function(){
+  function fmt(n){ return n.toLocaleString('ru-RU',{maximumFractionDigits:2}); }
+  document.getElementById('calcBtn').addEventListener('click', function(){
+    var sum = parseFloat(document.getElementById('sum').value) || 0;
+    var days = parseInt(document.getElementById('days').value,10) || 0;
+    var rate = parseFloat(document.getElementById('rate').value) || 0;
+    var neustoyka = sum * (rate/100) * days;
+    var capped = neustoyka;
+    var note = '';
+    if (rate === 3 && neustoyka > sum) { capped = sum; note = ' (ограничено ценой заказа)'; }
+    var res = document.getElementById('res');
+    document.getElementById('resSum').textContent = fmt(Math.round(capped*100)/100) + ' ₽';
+    document.getElementById('resDetail').textContent =
+      fmt(sum) + ' ₽ × ' + rate + '% × ' + days + ' дн. = ' + fmt(Math.round(neustoyka*100)/100) + ' ₽' + note;
+    res.classList.add('show');
+  });
+})();
+</script>
+</body>
+</html>
